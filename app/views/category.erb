@@ -1,8 +1,9 @@
+<a href="/">Back to the index</a>
 <h1><%= @category.title %></h1>
 <h3><a href="/post/create/<%=@category.id%>">Create New Post</a></h3>
 <ul>
   <% @category.posts.each do |post| %>
-  <li><a href='/post/<%= post.id %>'><%= post.title %></a></li>
+  <li><a href='/post/<%= post.id %>'><%= post.title %>, $<%= post.price %></a></li>
   <% end %>
 </ul>
 <form action="/category/delete/<%=@category.id%>" method="POST">

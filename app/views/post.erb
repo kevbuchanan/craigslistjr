@@ -1,4 +1,6 @@
+<a href='/<%=@post.category.id%>/posts'>Back to <%=@post.category.title%></a>
 <h1><%= @post.title %></h1>
+<h3>$<%= @post.price %></h3>
 <p><%= @post.created_at.to_date %></p>
 <p><%= @post.body %></p>
 <p>Last Updated At: <%= @post.updated_at.to_date %></p>

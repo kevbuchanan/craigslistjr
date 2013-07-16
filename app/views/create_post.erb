@@ -1,5 +1,9 @@
+<h1>Create Post</h1>
 <form action="/post/<%=@category_id%>/new" method="POST">
-  <label>Title<input type="text" name=""></label>
-  <label>Text<input type="text">
+  <label>Title: <input type="text" name="post[title]"></label>
+  <label>Price: <input type="float" name="post[price]"></label>
+  <br>
+  <br>
+  <label>Text: <textarea rows='10' cols='40' name='post[body]' wrap='virtual'></textarea></label>
   <input type="submit">
 </form>
