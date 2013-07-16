@@ -12,3 +12,14 @@ get '/post/:post_id' do
   @post = Post.find(params[:post_id])
   erb :post
 end
+
+post '/category/create' do
+  @category = Category.create(params[:category])
+  redirect to("/#{@category.title}/posts")
+end
+
+post '/category/delete/:id' do
+  @category = Category.find(params[:id])
+  @category.destroy
+  redirect to("/")
+end
