@@ -1,0 +1,6 @@
+<h1><%= @category.title %></h1>
+<ul>
+  <% @category.posts.each do |post| %>
+  <li><a href='/post/<%= post.id %>'><%= post.title %></a></li>
+  <% end %>
+</ul>
