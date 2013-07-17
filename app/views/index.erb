@@ -1,4 +1,3 @@
-<h1>Welcome to Craigslist Jr!</h1>
 <h2>Categories</h2>
 <ul>
   <% @categories.each do |category| %>
@@ -7,8 +6,8 @@
 </ul>
 
 <form action="/category/create" method="POST">
-  <label>New Category: <input type="text" name="category[title]" placeholder="New Category Name"></label>
-  <input class='btn btn-primary' type="submit" value="create">
+  <label>New Category: <input class='text' type="text" name="category[title]" placeholder="New Category Name"></label>
+  <input class='btn' type="submit" value="create">
 </form>
 
 

@@ -2,10 +2,10 @@
 <h1>Edit Post</h1>
 <p>Your edit link is: /edit/<%=@post.key%></p>
 <form action="/post/<%=@post.id%>/edit" method="POST">
-  <label>Title: <input type="text" value = "<%= @post.title %>" name="post[title]"></label>
-  <label>Price: <input type="float" value = "<%= @post.price %>"name="post[price]"></label>
+  <label>Title: <input class='text' type="text" value = "<%= @post.title %>" name="post[title]"></label>
+  <label>Price: <input class='text' type="float" value = "<%= @post.price %>"name="post[price]"></label>
   <br>
   <br>
-  <label>Text: <textarea rows='10' cols='40' name='post[body]' wrap='virtual'><%=@post.body %></textarea></label>
-  <input type="submit">
+  <label>Text: <textarea class='text' rows='10' cols='40' name='post[body]' wrap='virtual'><%=@post.body %></textarea></label>
+  <input class='btn' type="submit">
 </form>
