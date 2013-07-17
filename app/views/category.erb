@@ -1,11 +1,11 @@
 <a href="/">Back to the index</a>
 <h1><%= @category.title %></h1>
-<h3><a href="/post/create/<%=@category.id%>">Create New Post</a></h3>
+<h3><a class='btn btn-primary' href="/post/create/<%=@category.id%>">Create New Post</a></h3>
 <ul>
   <% @category.posts.each do |post| %>
   <li><a href='/post/<%= post.id %>'><%= post.title %>, $<%= post.price %></a></li>
   <% end %>
 </ul>
 <form action="/category/delete/<%=@category.id%>" method="POST">
-  <label>DESTROY Category? <input type="submit" value="DELETE"> </label>
+  <label><input class='btn btn-danger' type="submit" value="Delete Category"> </label>
 </form>
